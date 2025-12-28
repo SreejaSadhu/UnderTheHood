@@ -15,24 +15,6 @@ It’s about understanding how data is stored, moved, and optimized.
 
 ---
 
-## The real idea
-
-Every real app works because data is handled smartly.
-
-- Google Maps → graphs + shortest paths  
-- Spotify / Netflix → graphs + ranking  
-- Instagram → queues, heaps, relationships  
-- Search → hashing + indexing  
-
-Once you see this, things start to click.
-
-You stop guessing.  
-You start reasoning.  
-You start thinking like an engineer.
-
----
-
-
 ## The goal
 
 Not to memorize.  
