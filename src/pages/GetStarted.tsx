@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { dataStructures } from "@/data/dataStructures";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { Linkedin } from "lucide-react";
 
 const iconMap: Record<string, string> = {
   arrays: "/assets/ds-icons/arrays.png",
@@ -19,7 +20,17 @@ const iconMap: Record<string, string> = {
 
 export default function GetStarted() {
   return (
-    <div className="min-h-screen py-24 px-6">
+    <div className="min-h-screen py-24 px-6 relative">
+      <a
+        href="https://www.linkedin.com/in/sreejasadhu"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 backdrop-blur-md border border-white/10 text-muted-foreground hover:text-white hover:border-white/20 transition-all duration-300 hover:scale-105 active:scale-95 text-sm font-medium group shadow-lg"
+      >
+        <Linkedin size={16} className="group-hover:text-[#0077b5] transition-colors" />
+        <span className="opacity-0 group-hover:opacity-100 max-w-0 group-hover:max-w-[100px] overflow-hidden transition-all duration-300 whitespace-nowrap">Sreeja Sadhu</span>
+      </a>
+
       <SmoothCursor
         color="black"
         size={25}
