@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Navigation() {
     const location = useLocation();
     const isLanding = location.pathname === "/";
+    const isDS = location.pathname.startsWith("/ds/");
 
     return (
         <AnimatePresence>
-            {!isLanding && (
+            {!isLanding && !isDS && (
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}

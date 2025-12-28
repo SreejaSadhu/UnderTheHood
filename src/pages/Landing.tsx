@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import LightPillar from "@/components/LightPillar";
 import TextReveal from "@/components/TextReveal";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Landing() {
+  const { toast } = useToast();
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
       {/* Light Pillar Background Effect */}
@@ -36,6 +39,22 @@ export default function Landing() {
         <div className="mt-10">
           <Link
             to="/get-started"
+            onClick={() => {
+              toast({
+                title: "Engineering Reality Check",
+                description: (
+                  <div className="space-y-1.5 mt-1 text-xs opacity-90 leading-relaxed">
+                    <p>Data structures don’t exist as fixed objects in real systems.</p>
+                    <p>They represent ways of organizing data for performance.</p>
+                    <p>Real implementations vary by language, platform, and scale.</p>
+                    <p>Systems often combine multiple structures together.</p>
+                    <p>What you’ll see here are the ideas behind those choices.</p>
+                    <p className="font-medium text-primary">Focus on trade‑offs, not literal implementations.</p>
+                  </div>
+                ),
+                duration: 8000,
+              })
+            }}
             className="inline-flex items-center gap-2 bg-white text-black hover:bg-gray-100 px-6 py-3 rounded text-sm font-medium transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] transform hover:-translate-y-0.5"
           >
             Get Started

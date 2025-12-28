@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { dataStructures } from "@/data/dataStructures";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const iconMap: Record<string, string> = {
   arrays: "/assets/ds-icons/arrays.png",
@@ -9,11 +10,26 @@ const iconMap: Record<string, string> = {
   "linked-lists": "/assets/ds-icons/linked-lists.png",
   "hash-maps": "/assets/ds-icons/hash-maps.png",
   trees: "/assets/ds-icons/trees.png",
+  strings: "/assets/ds-icons/arrays.png",
+  bsts: "/assets/ds-icons/trees.png",
+  heaps: "/assets/ds-icons/trees.png",
+  tries: "/assets/ds-icons/trees.png",
+  graphs: "/assets/ds-icons/linked-lists.png",
 };
 
 export default function GetStarted() {
   return (
     <div className="min-h-screen py-24 px-6">
+      <SmoothCursor
+        color="black"
+        size={25}
+        rotateOnMove={true}
+        scaleOnClick={true}
+        glowEffect={true}
+        showTrail={true}
+        trailLength={6}
+        magneticElements="a"
+      />
       <div className="content-container">
         <AnimatedSection>
           <h1 className="text-3xl sm:text-4xl font-display font-medium tracking-tight text-foreground text-center">
